@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 // Function
 import { shorten } from "../../../helper/function";
@@ -11,7 +11,6 @@ import styles from "./Cart.module.css";
 import { decrease, increase, removeItem } from "../../../redux/cart/cartAction";
 
 const Cart = (props) => {
-  const state = useSelector((state) => state.cartState);
   const dispatch = useDispatch();
   const { image, title, price, quantity } = props.data;
 
