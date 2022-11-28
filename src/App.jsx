@@ -8,10 +8,12 @@ import store from "./redux/store";
 // Components
 import Store from "./components/Store/Store";
 import Details from "./components/details/Details";
+import Navbar from "./components/shared/navbar/Navbar";
 
 const App = () => {
   return (
     <Provider store={store}>
+      <Navbar />
       <Routes>
         <Route path="/product" element={<Store />} />
         <Route path="/product/:id" element={<Details />} />
